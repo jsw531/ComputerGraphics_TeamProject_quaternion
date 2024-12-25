@@ -30,7 +30,8 @@ public class CameraController : MonoBehaviour, IDamageable
 
         UpdateHealthUI();
         // Far Plane�� 0 ���ϰ� �Ǹ� ���� ����
-        if (currentFarPlane <= 0)
+        // game 종료 조건을 currentFarPlane <= 0 에서 currentFarPlane <= minFarPlane으로 수정
+        if (currentFarPlane <= minFarPlane)
         {
             uiManager.GameOver();
         }

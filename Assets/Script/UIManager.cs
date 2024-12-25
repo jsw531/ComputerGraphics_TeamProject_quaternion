@@ -27,7 +27,7 @@ public class UIManager : MonoBehaviour
         player.SetActive(false);
         playerCamera.SetActive(false);
         gameOverPanel.SetActive(true);
-        Time.timeScale = 0f; // °ÔÀÓ ÀÏ½ÃÁ¤Áö
+        Time.timeScale = 0f; // ï¿½ï¿½ï¿½ï¿½ ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½
     }
     public void Clear()
     {
@@ -37,14 +37,15 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-
-    private void RestartGame()
+    //private -> public
+    public void RestartGame()
     {
-        Time.timeScale = 1f; // °ÔÀÓ ¼Óµµ Á¤»óÈ­
+        Time.timeScale = 1f; // ï¿½ï¿½ï¿½ï¿½ ï¿½Óµï¿½ ï¿½ï¿½ï¿½ï¿½È­
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    private void QuitGame()
+    //private -> public
+    public void QuitGame()
     {
         Application.Quit();
     }
