@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
+
 public class GameManager : MonoBehaviour
 {
     public PlayerInventory playerInventory;
     public Transform startPoint;
     public float clearDistance = 2f;
+    public UIManager uIManager;
 
     void Update()
     {
@@ -19,6 +22,6 @@ public class GameManager : MonoBehaviour
 
     void GameClear()
     {
-
+        uIManager.Clear();
     }
 }
